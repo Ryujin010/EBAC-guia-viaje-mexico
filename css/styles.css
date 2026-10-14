@@ -1,0 +1,1331 @@
+/* =========================================
+   VARIABLES GLOBALES
+========================================= */
+:root {
+
+    
+    --color-primario: #2E7D32;
+    --color-secundario: #66BB6A;
+    --color-oscuro: #1B5E20;
+
+    --color-texto: #282828;
+    --color-texto-secundario: #555;
+
+    --color-fondo: #f4f4f4;
+    --color-card: #ffffff;
+
+    --color-borde: #dcdcdc;
+
+    --color-hover: #FFD54F;
+
+    --sombra: 0 4px 12px rgba(0,0,0,0.1);
+
+    --radio: 15px;
+
+    --transicion: 0.3s ease;
+    
+
+    /*
+    --color-fondo: #121212;
+    --color-card: #1E1E1E;
+    --color-texto: #F5F5F5;
+    --color-texto-secundario: #D0D0D0;
+    --color-borde: #333;
+    --color-titulo: #81C784;
+    --sombra: 0 4px 15px rgba(0,0,0,0.5);
+    */
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+@media (prefers-color-scheme: dark) {
+
+    :root {
+
+        --color-fondo: #121212;
+
+        --color-card: #1E1E1E;
+
+        --color-texto: #F5F5F5;
+
+        --color-texto-secundario: #D0D0D0;
+
+        --color-borde: #333;
+
+        --sombra: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+}
+
+/* =========================================
+   RESET
+========================================= */
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+/* =========================================
+   BODY
+========================================= */
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: var(--color-fondo);
+
+    color: var(--color-texto);
+
+    line-height: 1.6;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+body .saltar-enlace {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* =========================================
+   TIPOGRAFÍA RESPONSIVE
+========================================= */
+h1 {
+
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+
+    color: var(--color-primario);
+
+    margin-bottom: 1rem;
+}
+
+h3 {
+
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+}
+
+p,
+a,
+li,
+label,
+input,
+select,
+button {
+
+    font-size: clamp(
+        0.95rem,
+        2vw,
+        1rem
+    );
+}
+
+/* =========================================
+   LAYOUT GENERAL
+========================================= */
+.layout {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.header {
+
+    background: linear-gradient(
+        to right,
+        var(--color-oscuro), 
+        var(--color-primario),
+        var(--color-secundario)
+    );
+
+    color: white;
+
+    padding: 2rem;
+}
+
+/* HEADER CONTENT */
+.header-content {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+.logo-area {
+
+    flex: 1;
+}
+
+/* =========================================
+   PSEUDOELEMENTOS
+========================================= */
+.header h1::before {
+
+    content: "🌎 ";
+}
+
+.header h1::after {
+
+    content: " ✈️";
+}
+
+/* =========================================
+   NAV
+========================================= */
+.nav {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    flex-wrap: wrap;
+}
+
+/* LINKS NAV */
+.nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 0.7rem 1rem;
+
+    border-radius: 10px;
+
+    transition: var(--transicion);
+}
+
+.nav a[aria-current="page"] {
+
+    background-color: rgba(255,255,255,0.2);
+
+    text-decoration: underline;
+}
+
+/* =========================================
+   HOVER SOLO DESKTOP
+========================================= */
+@media (hover: hover) {
+
+    .nav a:hover, 
+    .nav a:focus-visible {
+
+        background-color: rgba(255,255,255,0.2);
+
+        color: #fff;
+
+        text-decoration: underline;
+
+        color: var(--color-hover);
+    }
+
+    .card:hover {
+
+        transform: translateY(-6px);
+    }
+
+    .img-responsive:hover {
+
+        transform: scale(1.03);
+    }
+
+    .destino-card:hover {
+
+        transform: translateY(-8px);
+    }
+
+}
+
+/* ACTIVE */
+.nav a:active {
+
+    transform: scale(0.96);
+}
+
+/* =========================================
+   CONTAINER GRID
+========================================= */
+.container-grid {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 2rem auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 2rem;
+
+    align-items: start;
+
+    flex: 1;
+}
+
+/* =========================================
+   CONTAINER NORMAL
+========================================= */
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 2rem auto;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+.card {
+
+    background-color: var(--color-card);
+
+    padding: 1.5rem;
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+
+    transition: var(--transicion);
+}
+
+/* =========================================
+   TEXTOS
+========================================= */
+.card p {
+
+    margin-top: 1rem;
+
+    color: var(--color-texto-secundario);
+}
+
+/* =========================================
+   HIGHLIGHT
+========================================= */
+.highlight {
+
+    /* color: #B71C1C */
+    color: #D32F2F; 
+
+    font-weight: bold;
+}
+
+/* =========================================
+   LISTAS
+========================================= */
+.lista-destinos,
+.lista-pasos {
+
+    margin-left: 1.5rem;
+
+    margin-top: 1rem;
+}
+
+/* =========================================
+   PSEUDOCLASES
+========================================= */
+.lista-destinos li:first-child {
+
+    color: var(--color-primario);
+
+    font-weight: bold;
+}
+
+.lista-destinos li:last-child {
+
+    color: #B71C1C
+    /* color: #D32F2F; */
+}
+
+.lista-destinos li:nth-child(even) {
+
+    background-color: rgba(0,0,0,0.03);
+}
+
+/* =========================================
+   IMÁGENES
+========================================= */
+.img-responsive {
+
+    width: 100%;
+
+    border-radius: 12px;
+
+    margin-top: 1rem;
+
+    transition: var(--transicion);
+
+    object-fit: cover;
+}
+
+/* =========================================
+   MULTIMEDIA
+========================================= */
+.media {
+
+    width: 100%;
+
+    border-radius: 10px;
+
+    margin-top: 1rem;
+}
+
+/* =========================================
+   SVG
+========================================= */
+.svg-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.map-icon {
+
+    width: clamp(100px, 20vw, 150px);
+}
+
+.shadow {
+
+    fill: gray;
+
+    opacity: 0.3;
+}
+
+.pin {
+
+    fill: #E53935;
+}
+
+.pin-inner {
+
+    fill: white;
+}
+
+.pin-center {
+
+    fill: #B71C1C;
+}
+
+/* =========================================
+   FORMULARIO
+========================================= */
+.form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+fieldset {
+
+    border: 1px solid var(--color-borde);
+
+    padding: 1rem;
+
+    border-radius: 10px;
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+input,
+select {
+
+    width: 100%;
+
+    padding: 0.8rem;
+
+    margin-top: 0.5rem;
+
+    margin-bottom: 1rem;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--color-borde);
+
+    background-color: var(--color-card);
+
+    color: var(--color-texto);
+}
+
+/* FOCUS */
+input:focus,
+select:focus {
+
+    outline: none;
+
+    border-color: var(--color-primario);
+
+    box-shadow: 0 0 5px rgba(46,125,50,0.4);
+}
+
+/* =========================================
+   BOTÓN
+========================================= */
+button {
+
+    background-color: var(--color-primario);
+
+    color: white;
+
+    border: none;
+
+    padding: 1rem;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: var(--transicion);
+}
+
+@media (hover: hover) {
+
+    button:hover {
+
+        background-color: var(--color-oscuro);
+    }
+
+}
+
+/* =========================================
+   HERO DESTINOS
+========================================= */
+.destinos-header {
+
+    background-image: url("../img/cancun.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    position: relative;
+
+    min-height: 60vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+/* OVERLAY */
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* HERO CONTENT */
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    padding: 2rem;
+
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* BADGE */
+.badge {
+
+    display: inline-block;
+
+    background-color: var(--color-hover);
+
+    color: black;
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+   GRID GALERÍA
+========================================= */
+.grid-galeria {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 2rem;
+
+    margin: 2rem 0;
+}
+
+/* =========================================
+   DESTINO CARD
+========================================= */
+.destino-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+
+    transition: var(--transicion);
+}
+
+/* IMAGEN */
+.destino-card img {
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* INFO */
+.destino-info {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+
+    padding: 1.5rem;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.85)
+    );
+
+    color: white;
+}
+
+/* ETIQUETA */
+.etiqueta {
+
+    display: inline-block;
+
+    background-color: var(--color-hover);
+
+    color: black;
+
+    padding: 0.4rem 0.8rem;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+   INFO FLEX
+========================================= */
+.info-flex {
+
+    display: flex;
+
+    gap: 2rem;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 2rem;
+}
+
+.info-box {
+
+    flex: 1;
+
+    min-width: 250px;
+
+    background-color: var(--color-card);
+
+    padding: 2rem;
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+}
+
+/* =========================================
+   TABLA
+========================================= */
+.table-container {
+
+    overflow-x: auto;
+}
+
+.table-container:focus-visible {
+
+    outline: 3px solid #1a237e;
+    outline-offset: 2px;
+}
+
+.table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 600px;
+}
+
+.table th {
+
+    background-color: var(--color-primario);
+
+    color: white;
+}
+
+.table th,
+.table td {
+
+    padding: 1rem;
+
+    border: 1px solid var(--color-borde);
+
+    text-align: left;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+.footer {
+
+    background-color: var(--color-oscuro);
+
+    color: white;
+
+    padding: 2rem;
+}
+
+.footer-container,
+.footer-flex {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    flex-wrap: wrap;
+}
+
+.footer-box {
+
+    flex: 1;
+
+    min-width: 220px;
+}
+
+/* LINKS FOOTER */
+.footer-box a {
+
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-top: 0.5rem;
+}
+
+/* =========================================
+   BOTÓN FLOTANTE
+========================================= */
+.btn-flotante {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    right: 20px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    background-color: var(--color-primario);
+
+    color: white;
+
+    text-decoration: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 1.5rem;
+
+    z-index: 999;
+}
+
+/* =========================================
+   MEDIA QUERY TABLET
+========================================= */
+@media (max-width: 992px) {
+
+    .header-content {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .footer-container,
+    .footer-flex {
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+}
+
+/* =========================================
+   MEDIA QUERY MOBILE
+========================================= */
+@media (max-width: 768px) {
+
+    .nav {
+
+        flex-direction: column;
+    }
+
+    .container-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .grid-galeria {
+
+        grid-template-columns: 1fr;
+    }
+
+    .info-flex {
+
+        flex-direction: column;
+    }
+
+    .hero-content {
+
+        padding: 1rem;
+    }
+
+    .destino-card img {
+
+        height: 280px;
+    }
+
+}
+
+/* =========================================
+   MEDIA QUERY SMALL MOBILE
+========================================= */
+@media (max-width: 480px) {
+
+    body {
+
+        line-height: 1.5;
+    }
+
+    .header,
+    .card,
+    .info-box {
+
+        padding: 1rem;
+    }
+
+    .btn-flotante {
+
+        width: 45px;
+
+        height: 45px;
+    }
+
+    /* =========================================
+   HERO HOSPEDAJE
+========================================= */
+.hospedaje-header {
+
+    position: relative;
+
+    background-image: url("../img/hotel-banner.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    min-height: 60vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+/* =========================================
+   HERO GASTRONOMÍA
+========================================= */
+.gastronomia-header {
+
+    position: relative;
+
+    background-image: url("../img/gastronomia-banner.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    min-height: 60vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+/* =========================================
+   HERO CONTACTO
+========================================= */
+.hero-contacto {
+
+    position: relative;
+
+    min-height: 45vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 2rem;
+
+    background-image: url("../img/playa.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-color: rgba(0,0,0,0.6);
+}
+
+.hero-contacto-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    width: min(90%, 700px);
+}
+
+.hero-contacto-content h2 {
+
+    font-size: clamp(2rem, 5vw, 4rem);
+
+    margin: 1rem 0;
+}
+
+/* =========================================
+   GRID CONTACTO
+========================================= */
+.contacto-grid {
+
+    align-items: start;
+}
+
+/* =========================================
+   FORMULARIO AVANZADO
+========================================= */
+.form-avanzado {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+
+    border: 1px solid #767676;
+}
+
+/* GRUPO */
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+/* LABEL */
+.form-group label {
+
+    margin-bottom: 0.5rem;
+
+    font-weight: 600;
+}
+
+/* INPUTS */
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 1rem;
+
+    border-radius: 12px;
+
+    border: 1px solid #767676;
+
+    font-size: 1rem;
+
+    background-color: white;
+
+    color: #222;
+
+    transition: 0.3s;
+}
+
+/* TEXTAREA */
+textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+/* FOCUS */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    outline: none;
+
+    border-color: #2E7D32;
+
+    box-shadow: 0 0 10px rgba(46,125,50,0.3);
+}
+
+/* VALIDACIONES */
+input:valid,
+textarea:valid,
+select:valid {
+
+    border-color: #43A047;
+}
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+
+    border-color: #E53935;
+}
+
+/* =========================================
+   CHECKBOX
+========================================= */
+.checkbox-group {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+}
+
+/* =========================================
+   INFO CONTACTO
+========================================= */
+.contacto-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+.info-contacto-box {
+
+    padding: 1rem;
+
+    border-radius: 12px;
+
+    background-color: rgba(46,125,50,0.08);
+}
+
+/* =========================================
+   MAPA RESPONSIVE
+========================================= */
+.map-section {
+
+    width: 100%;
+
+    padding: 2rem;
+}
+
+.map-container {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    width: min(1200px, 95%);
+
+    margin: auto;
+
+    aspect-ratio: 16 / 9;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+}
+
+/* =========================================
+   DARK MODE CONTACTO
+========================================= */
+::placeholder {
+
+        color: #6b6b6b;
+        
+        opacity: 1;
+    
+    }
+
+@media (prefers-color-scheme: dark) {
+
+    ::placeholder {
+
+        color: #b0b0b0;
+
+        opacity: 1;
+    
+    }
+
+    .highlight 
+    .lista-destinos li:last-child {
+
+        color: #ff8a80;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+
+        background-color: #1f1f1f;
+
+        color: #f5f5f5;
+
+        border: 1px solid #9E9E9E;
+    }
+
+    .info-contacto-box {
+
+        background-color: rgba(255,255,255,0.05);
+    }
+}
+
+/* =========================================
+   HOVER SOLO EN DESKTOP
+========================================= */
+@media (hover: hover) {
+
+    button:hover {
+
+        transform: translateY(-2px);
+    }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+@media (max-width: 768px) {
+
+    .hero-contacto {
+
+        min-height: 35vh;
+    }
+
+    .checkbox-group {
+
+        align-items: flex-start;
+    }
+
+    .map-section {
+
+        padding: 1rem;
+        grid-column: 1 / -1;
+    }
+}
+
+/* =========================================
+   Accesibilidad: Saltar al contenido principal
+========================================= */
+.saltar-enlace {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-120%);
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.saltar-enlace:focus,
+.saltar-enlace:focus-visible {
+    transform: translateY(0);
+    outline: 3px solid #FFD54F;
+    outline-offset: 2px;
+}
+
+/* =========================================
+   Accesibilidad: Ocultar elementos visualmente pero mantenerlos
+   accesibles para lectores de pantalla
+========================================= */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* =========================================
+   Accesibilidad: Mejorar la legibilidad del texto para usuarios 
+   con discapacidades visuales
+========================================= */
+fieldset { 
+    border: 0; 
+    padding: 0; 
+    margin: 0 0 1rem; 
+    min-width: 0; 
+}
+
+legend { 
+    font-weight: 700; 
+    padding: 0; 
+    margin-bottom: 0.5rem; 
+}
+
+/* =========================================
+   Accesibilidad: Mejorar la visibilidad del foco para
+   usuarios que navegan con teclado
+========================================= */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+
+a:focus-visible {
+    outline: 3px solid #1a237e;
+    outline-offset: 2px;
+}
+
+}

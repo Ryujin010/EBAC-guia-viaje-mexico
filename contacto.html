@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- RESPONSIVE -->
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- SEO -->
+    <meta 
+        name="description" 
+        content="Contáctanos para planear tu viaje por México"
+    >
+
+    <title>Contacto | Descubre México</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <a href="#contenido" class="saltar-enlace">
+        Saltar al contenido principal
+    </a>
+
+    <!-- BOTÓN FLOTANTE -->
+    <a 
+        href="#principal" 
+        class="btn-flotante"
+        aria-label="Volver arriba"
+    >
+        ↑
+    </a>
+
+    <!-- LAYOUT -->
+    <div class="layout">
+
+        <!-- HEADER -->
+        <header class="header" id="principal">
+
+            <div class="header-content">
+
+                <!-- LOGO -->
+                <div class="logo-area">
+
+                    <h1>Descubre México</h1>
+
+                    <p class="logo-titulo">
+                        Planea tus próximas vacaciones con nosotros
+                    </p>
+
+                </div>
+
+                <!-- NAV -->
+                <nav class="nav">
+
+                    <a href="index.html">Inicio</a>
+
+                    <a href="destinos.html">Destinos</a>
+
+                    <a href="gastronomia.html">Gastronomía</a>
+                   
+                    <a href="hospedaje.html">Hospedaje</a>                  
+
+                    <a href="contacto.html" aria-current="page">Contacto</a>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+        <!-- HERO -->
+        <section class="hero-contacto">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-contacto-content">
+
+                <span class="badge">
+                    📩 Atención personalizada
+                </span>
+
+                <h2>Contáctanos</h2>
+
+                <p>
+                    Estamos listos para ayudarte a planear tu viaje ideal.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- MAIN -->
+        <main class="container-grid contacto-grid" id="contenido">
+
+            <!-- FORMULARIO -->
+            <section class="card">
+
+                <h2>Formulario de contacto</h2>
+
+                <p class="nota-form">Los campos marcados con <span aria-hidden="true">*</span>
+                <span class="visually-hidden">asterisco</span> son obligatorios.</p>
+
+                <form class="form-avanzado" action="#" method="POST" aria-label="Formulario de contacto para solicitar información sobre viajes">
+
+                    <fieldset>
+
+                        <legend>
+                            Información personal
+                        </legend>
+
+                        <!-- NOMBRE -->
+                        <div class="form-group">
+
+                            <label for="nombre">
+                                Nombre completo <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Ej. Juan Pérez"
+                                required
+                                minlength="3"
+                                maxlength="50"
+                            >
+
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+
+                            <label for="email">
+                                Correo electrónico <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autoComplete="email"
+                                placeholder="correo@email.com"
+                                required
+                            >
+
+                        </div>
+
+                        <!-- TEL -->
+                        <div class="form-group">
+
+                            <label for="telefono">
+                                Teléfono <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                autoComplete="tel"
+                                placeholder="55 1234 5678"
+                                pattern="[0-9\s]{10,15}"
+                                aria-describedby="telefono-ayuda"
+                                required
+                            >
+
+                            <small id="telefono-ayuda" class="ayuda-texto">
+                                Formato: 10 a 15 dígitos, solo números y espacios.
+                            </small>
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>
+                            Detalles del viaje
+                        </legend>
+                        <!-- DESTINO -->
+                        <div class="form-group">
+
+                            <label for="destino">
+                                Destino de interés <span aria-hidden="true">*</span>
+                            </label>
+
+                            <select 
+                                id="destino"
+                                name="destino"
+                                required
+                            >
+
+                                <option value="">
+                                    Selecciona un destino
+                                </option>
+
+                                <option value="cancun">
+                                    Cancún
+                                </option>
+
+                                <option value="ciudad-de-mexico">
+                                    Ciudad de México
+                                </option>
+
+                                <option value="guadalajara">
+                                    Guadalajara
+                                </option>
+
+                                <option value="riviera-maya">
+                                    Riviera Maya
+                                </option>
+
+                                <option value="monterrey">
+                                    Monterrey
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- PERSONAS -->
+                        <div class="form-group">
+
+                            <label for="personas">
+                                Número de personas <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="personas"
+                                name="personas"
+                                min="1"
+                                max="20"
+                                placeholder="Ingresa de 1 a maximo 20 personas"
+                                required
+                            >
+
+                        </div>
+
+                        <!-- FECHA -->
+                        <div class="form-group">
+
+                            <label for="fecha">
+                                Fecha estimada del viaje <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="date"
+                                id="fecha"
+                                name="fecha"
+                                required
+                            >
+
+                        </div>
+
+                        <!-- MENSAJE -->
+                        <div class="form-group">
+
+                            <label for="mensaje">
+                                Mensaje
+                            </label>
+
+                            <textarea
+                                id="mensaje"
+                                name="mensaje"
+                                rows="6"
+                                placeholder="Cuéntanos qué tipo de experiencia deseas..."
+                                minlength="10"
+                                maxlength="500"
+                                required
+                            ></textarea>
+
+                        </div>
+                    
+                    </fieldset>
+
+                    <!-- CHECKBOX -->
+                    <div class="checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="terminos"
+                            name="terminos"
+                            required
+                        >
+
+                        <label for="terminos">
+                            Acepto términos y condiciones <span aria-hidden="true">*</span>
+                        </label>
+
+                    </div>
+
+                    <!-- BOTÓN -->
+                    <button type="submit">
+
+                        Enviar solicitud
+
+                    </button>
+
+                </form>
+
+            </section>
+
+            <!-- INFORMACIÓN -->
+            <aside class="card contacto-info">
+
+                <h2>Información de contacto</h2>
+
+                <div class="info-contacto-box">
+
+                    <h3>📍 Oficina</h3>
+
+                    <p>
+                        Ciudad de México, México
+                    </p>
+
+                </div>
+
+                <div class="info-contacto-box">
+
+                    <h3>📞 Teléfono</h3>
+
+                    <p>
+                        +52 55 1234 5678
+                    </p>
+
+                </div>
+
+                <div class="info-contacto-box">
+
+                    <h3>✉️ Correo</h3>
+
+                    <p>
+                        contacto@descubremexico.com
+                    </p>
+
+                </div>
+
+                <div class="info-contacto-box">
+
+                    <h3>🕒 Horario</h3>
+
+                    <p>
+                        Lunes a Viernes — 9:00 AM a 6:00 PM
+                    </p>
+
+                </div>
+
+            </aside>
+
+                <!-- MAPA -->
+            <section class="map-section" aria-labelledby="titulo-mapa">
+
+                <h2 id="titulo-mapa" class="visually-hidden">
+                    Ubicación de nuestra oficina
+                </h2>
+
+                <div class="map-container">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15039.430744063582!2d-99.133208!3d19.432608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92d7d5e4e6f%3A0x7f1d6f5d1c6c2f1!2sCiudad%20de%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1710000000000"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa Ciudad de México"
+                    ></iframe>
+
+                </div>
+
+            </section>
+
+        </main>
+
+       
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <div class="footer-container">
+
+                <div class="footer-box">
+
+                    <h3>Descubre México</h3>
+
+                    <p>
+                        Tu próxima aventura comienza aquí.
+                    </p>
+
+                </div>
+
+                <div class="footer-box">
+
+                    <h3>Navegación</h3>
+
+                    <nav aria-label="Pie de pagina - Navegación del sitio web">
+
+                        <a href="index.html">
+                            Inicio
+                        </a>
+
+                        <a href="destinos.html">
+                            Destinos
+                        </a>
+
+                        <a href="gastronomia.html">
+                            Gastronomía
+                        </a>
+
+                        <a href="hospedaje.html">
+                            Hospedaje
+                        </a>
+                        
+                        <a href="contacto.html">
+                            Contacto
+                        </a>
+
+                    </nav>
+
+                </div>
+
+                <div class="footer-box">
+
+                    <h3>Redes Sociales</h3>
+
+                    <p>
+                        Instagram | Facebook | TikTok
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

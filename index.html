@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- RESPONSIVE -->
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- COLOR MOBILE -->
+    <meta 
+        name="theme-color" 
+        content="#2E7D32"
+    >
+
+    <meta 
+        name="description" 
+        content="Descubre los mejores destinos turísticos en México"
+    >
+
+    <title>
+        Guía de Viaje - México
+    </title>
+
+    <!-- CSS -->
+    <link 
+        rel="stylesheet" 
+        href="css/styles.css"
+    >
+
+</head>
+
+<body>
+
+    <a href="#contenido" class="saltar-enlace">
+        Saltar al contenido principal
+    </a>
+
+    <!-- BOTÓN FLOTANTE -->
+    <a 
+        href="#principal" 
+        class="btn-flotante"
+        aria-label="Volver arriba"
+    >
+        ↑
+    </a>
+
+    <!-- LAYOUT GENERAL -->
+    <div class="layout">
+
+        <!-- HEADER -->
+        <header class="header" id="principal">
+
+            <div class="header-content">
+
+                <!-- LOGO -->
+                <div class="logo-area">
+
+                    <h1>
+                        Descubre México
+                    </h1>
+
+                    <p>
+                        Tu guía completa para viajar & disfrutar al máximo &copy; 2026
+                    </p>
+
+                </div>
+
+                <!-- NAV -->
+                <nav class="nav" aria-label="Principal">
+
+                    <a href="index.html" aria-current="page">
+                        Inicio
+                    </a>
+
+                    <a href="destinos.html">
+                        Destinos
+                    </a>
+
+                    <a href="hospedaje.html">
+                        Hospedaje
+                    </a>
+
+                    <a href="gastronomia.html">
+                        Gastronomía
+                    </a>
+
+                    <a href="contacto.html">
+                        Contacto
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="container-grid" id="contenido">
+
+            <!-- INTRO -->
+            <section class="card intro-section">
+
+                <h2>
+                    Sobre esta guía
+                </h2>
+
+                <p>
+                    Esta guía te ayudará a explorar los destinos más increíbles de
+                    <span class="highlight">
+                        México
+                    </span>
+                    con información clara &amp; útil.
+                </p>
+
+                <p>
+                    Descubre playas, gastronomía y cultura mexicana.
+                </p>
+
+            </section>
+
+            <!-- DESTINO -->
+            <section class="card">
+
+                <h2>
+                    Destino destacado
+                </h2>
+
+                <article>
+
+                    <h3>
+                        Playas de México
+                    </h3>
+
+                    <!-- Imagen -->
+                    <img
+                        src="img/playa.jpeg"
+                        alt="Collage de tres playas mexicanas: 
+                        mar turquesa con zona hotelera, costa rocosa con oleaje 
+                        y arena dorada con vegetación"
+                        class="img-responsive"
+                    >
+
+                    <p>
+                        Disfruta de arenas blancas y aguas cristalinas en destinos como
+                        <mark>
+                            Cancún
+                        </mark>.
+                    </p>
+
+                    <p>
+                        Mejor época para viajar:
+                        <time datetime="2026-11">
+                            Noviembre
+                        </time>
+                    </p>
+
+                </article>
+
+            </section>
+
+            <!-- LISTAS -->
+            <section class="card">
+
+                <h2>
+                    Destinos populares
+                </h2>
+
+                <ul class="lista-destinos">
+
+                    <li>
+                        Cancún
+                    </li>
+
+                    <li>
+                        Ciudad de México
+                    </li>
+
+                    <li>
+                        Guadalajara
+                    </li>
+
+                    <li>
+                        Monterrey
+                    </li>
+
+                </ul>
+
+                <h3>
+                    Cómo planear tu viaje
+                </h3>
+
+                <ol class="lista-pasos">
+
+                    <li>
+                        Elegir destino
+                    </li>
+
+                    <li>
+                        Reservar hospedaje
+                    </li>
+
+                    <li>
+                        Preparar itinerario
+                    </li>
+
+                </ol>
+
+            </section>
+
+            <!-- MULTIMEDIA -->
+            <section class="card multimedia-section">
+
+                <h2>
+                    Experiencia multimedia
+                </h2>
+
+                <h3>
+                    Video de ejemplo
+                </h3>
+
+                <video class="media" controls>
+
+                    <source
+                        src="video/mexico.mp4"
+                        type="video/mp4"
+                    >
+
+                    Tu navegador no soporta video.
+
+                </video>
+
+                <h3>
+                    Audio ambiente
+                </h3>
+
+                <audio class="media" controls>
+
+                    <!--src="sounds/freesound_community-springs-birds-mexico-city-feb-2013-50146.mp3"-->
+                    <source
+                        src="sounds/freesound_community-springs-birds-mexico-city-feb-2013-50146.mpeg"
+                        type="audio/mp3"
+                    >
+
+                    Tu navegador no soporta audio.
+
+                </audio>
+
+                <h3>
+                    Video de YouTube
+                </h3>
+
+                <iframe
+                    class="media"
+                    src="https://www.youtube.com/embed/-F76xsEk5QE"
+                    title="YouTube video player"
+                    allowfullscreen>
+                </iframe>
+
+            </section>
+
+            <!-- SVG -->
+            <section class="card">
+
+                <h2>
+                    Ubicación
+                </h2>
+
+                <div class="svg-container">
+
+                    <svg class="map-icon" viewBox="0 0 100 140"
+                    role="img"  aria-label="Icono marcador de ubicación en mapa de nuestras oficinas en la Ciudad de Mexico">
+
+                        <!-- sombra -->
+                        <ellipse
+                            cx="50"
+                            cy="130"
+                            rx="20"
+                            ry="5"
+                            class="shadow"
+                        />
+
+                        <!-- pin -->
+                        <path
+                            d="M50 10 
+                            C30 10, 15 25, 15 45 
+                            C15 75, 50 120, 50 120 
+                            C50 120, 85 75, 85 45 
+                            C85 25, 70 10, 50 10 Z"
+                            class="pin"
+                        />
+
+                        <!-- interior -->
+                        <circle
+                            cx="50"
+                            cy="45"
+                            r="12"
+                            class="pin-inner"
+                        />
+
+                        <!-- centro -->
+                        <circle
+                            cx="50"
+                            cy="45"
+                            r="6"
+                            class="pin-center"
+                        />
+
+                    </svg>
+
+                </div>
+
+            </section>
+
+            <!-- FORMULARIO -->
+            <section class="card">
+
+                <h2>
+                    Reserva tu viaje
+                </h2>
+
+                <form class="form" action="#" method="post" aria-label="Formulario de reserva de viaje para solicitar información sobre viajes"> 
+
+                    <fieldset>
+
+                        <legend>
+                            Datos personales
+                        </legend>
+
+                        <label for="reserva-nombre">
+                            Nombre:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="reserva-nombre"
+                            name="nombre"
+                            autoComplete="name"
+                            placeholder="Escribe tu nombre"
+                            required
+                        >
+                             
+                   
+                        <label for="reserva-email">
+                            Email:
+                        </label>
+
+                        <input
+                            type="email"
+                            id="reserva-email"
+                            name="email"
+                            placeholder="correo@email.com"
+                            autoComplete="email"
+                            required
+                        >
+
+                        <label for="reserva-telefono">
+                            Teléfono:
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="reserva-telefono"
+                            name="telefono" 
+                            placeholder="55 1234 5678"
+                            autoComplete="tel"
+                            required
+                        >
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>
+                            Detalles del viaje
+                        </legend>
+
+                        <label for="reserva-destino">
+                            Destino:
+                        </label>
+
+                        <select id="reserva-destino" name="destino" required>
+
+                            <option value="">Selecciona Un Destino</option>
+                               
+                            <option value="cancun">
+                                Cancún
+                            </option>
+
+                            <option value="ciudad-de-mexico">
+                                Ciudad de México
+                            </option>
+
+                            <option value="guadalajara">
+                                Guadalajara
+                            </option>
+
+                            <option value="monterrey">
+                                Monterrey
+                            </option>
+
+                        </select>
+
+                        <label for="reserva-fecha">
+                            Fecha:
+                        </label>
+
+                        <input type="date" id="reserva-fecha" name="fecha" required>
+                       
+                        <label for="reserva-personas">
+                            Personas:
+                        </label>
+
+                        <input
+                            type="number"
+                            id="reserva-personas"
+                            name="personas"
+                            min="1"
+                            max="10"
+                            required
+                        >
+
+                    </fieldset>
+
+                    <button type="submit">
+
+                        Enviar
+
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <div class="footer-container">
+
+                <!-- COLUMNA -->
+                <div class="footer-box">
+
+                    <h3>
+                        Descubre México
+                    </h3>
+
+                    <p>
+                        Explora playas, cultura y gastronomía mexicana.
+                    </p>
+
+                </div>
+
+                <!-- COLUMNA -->
+                <div class="footer-box">
+
+                    <h3>
+                        Navegación
+                    </h3>
+
+                    <nav aria-label="Pie de pagina - Navegación del sitio web">
+
+                        <a href="index.html">
+                            Inicio
+                        </a>
+
+                        <a href="destinos.html">
+                            Destinos
+                        </a>
+
+                        <a href="hospedaje.html">
+                            Hospedaje
+                        </a>
+
+                        <a href="gastronomia.html">
+                            Gastronomía
+                        </a>
+
+                        <a href="contacto.html">
+                            Contacto
+                        </a>
+
+                    </nav>
+                    
+                </div>
+
+                <!-- COLUMNA -->
+                <div class="footer-box">
+
+                    <h3>
+                        Contacto
+                    </h3>
+
+                    <p>
+                        info@viajes.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- Proyecto en mejora continua -->
+
+</body>
+
+</html>
