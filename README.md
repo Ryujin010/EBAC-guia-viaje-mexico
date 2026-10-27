@@ -17,11 +17,7 @@ Proyecto desarrollado durante mi formación en **EBAC**.
 
 ## 📖 Descripción
 
-Página web con una guía de destinos turísticos de México, pensada para presentar información de forma clara y atractiva.
-
-<!-- Agrega aquí una captura de pantalla de tu proyecto:
-![Vista previa](./img/preview.png)
--->
+Página web con una guía de destinos turísticos de México, pensada para presentar información de forma clara y atractiva, la cual presenta también revisiones y pruebas para a accesibilidad web y tecnologías de asistencia para cualquier tipo de persona hechas con WAVE.
 
 ## 🛠️ Tecnologías
 
